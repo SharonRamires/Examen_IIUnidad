@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class Menu : Form
+    public partial class Ticket : Form
     {
-        public Menu()
+        public Ticket()
         {
             InitializeComponent();
         }
 
-        private void lISTADEUSUARIOSToolStripMenuItem_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            UsuariosForm usuariosForm = new UsuariosForm();
-            usuariosForm.Show();
+
         }
     }
 }
