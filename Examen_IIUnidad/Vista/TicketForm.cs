@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class Ticket : Form
+    public partial class TicketForm : Form
     {
-        public Ticket()
+        public TicketForm()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
