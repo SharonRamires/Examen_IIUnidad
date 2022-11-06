@@ -28,5 +28,11 @@ namespace Vista
             SoporteForm soporteform = new SoporteForm();
             soporteform.Show();
         }
+
+        private void gENERARTICKETToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TicketForm ticketForm = new TicketForm();
+            ticketForm.Show();
+        }
     }
 }

@@ -34,6 +34,7 @@
             this.tIPOSDESOPORTEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lISTADESOPORTESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tICKECTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gENERARTICKETToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,10 +84,19 @@
             // 
             // tICKECTToolStripMenuItem
             // 
+            this.tICKECTToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gENERARTICKETToolStripMenuItem});
             this.tICKECTToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tICKECTToolStripMenuItem.Name = "tICKECTToolStripMenuItem";
             this.tICKECTToolStripMenuItem.Size = new System.Drawing.Size(69, 21);
             this.tICKECTToolStripMenuItem.Text = "TICKECT";
+            // 
+            // gENERARTICKETToolStripMenuItem
+            // 
+            this.gENERARTICKETToolStripMenuItem.Name = "gENERARTICKETToolStripMenuItem";
+            this.gENERARTICKETToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gENERARTICKETToolStripMenuItem.Text = "GENERAR TICKET";
+            this.gENERARTICKETToolStripMenuItem.Click += new System.EventHandler(this.gENERARTICKETToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -112,5 +122,6 @@
         private ToolStripMenuItem tIPOSDESOPORTEToolStripMenuItem;
         private ToolStripMenuItem lISTADESOPORTESToolStripMenuItem;
         private ToolStripMenuItem tICKECTToolStripMenuItem;
+        private ToolStripMenuItem gENERARTICKETToolStripMenuItem;
     }
 }

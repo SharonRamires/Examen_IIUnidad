@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -117,6 +118,38 @@ namespace Datos
             {
             }
             return elimino;
+        }
+    
+        public async Task<Soporte> GetDeTipo(string tipo)
+        {
+            Soporte soporte = new Soporte();
+            try
+            {
+                string sql = "SELECT * FROM soporte WHERE Tipo = @Tipo";
+                using (MySqlConnection _conexion = new MySqlConnection(Conexion.Cadena))
+                {
+                    await _conexion.OpenAsync();
+                    using (MySqlCommand comando = new MySqlCommand(sql, _conexion))
+                    {
+                        comando.CommandType = System.Data.CommandType.Text;
+                        comando.Parameters.Add("@Tipo", MySqlDbType.VarChar, 50).Value = tipo;
+
+                        MySqlDataReader dr = (MySqlDataReader)await comando.ExecuteReaderAsync();
+                        if (dr.Read())
+                        {
+                            soporte.Tipo = dr["Tipo"].ToString();
+                            soporte.Descripcion = dr["Descripcion"].ToString();
+                            soporte.Respuesta = dr["Respuesta"].ToString();
+                            soporte.Precio = Convert.ToDecimal(dr["Precio"]);
+                        }
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return soporte;
         }
     }
 }
